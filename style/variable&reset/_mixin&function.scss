@@ -1,0 +1,31 @@
+@function multiple-box-shadow ($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+  }
+  @return unquote($value);
+}
+
+//link for background
+@mixin background{
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+@mixin star($size){
+  width:$size;
+  height:$size;
+  background: transparent;
+}
+
+@mixin secondStar($size){
+  content: "";
+  position: absolute;
+  top: 2000px;
+  background: transparent;
+  width:$size;
+  height:$size;
+}
+
+@mixin shadowCard($color){
+  box-shadow: 4px 4px 4px $color;
+}

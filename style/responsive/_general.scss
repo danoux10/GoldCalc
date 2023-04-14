@@ -1,0 +1,222 @@
+body {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+main {
+  position: fixed;
+  width: 99%;
+  height: 99%;
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    #input-and-response {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 5vh;
+      label,p{
+        font-size:x-large;
+      }
+      //input content
+      .input-content {
+        //link input text
+        input {
+          border-bottom: 1px solid $light;
+          color:$light;
+          font-size:x-large;
+          text-align: center;
+          max-width:120px;
+          margin: 0 1rem;
+        }
+
+        //link button
+        button {
+          background: $valid;
+          color:$light;
+          padding:1rem;
+          border-radius:50px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          &:hover{
+            box-shadow: 3px 3px 3px lime;
+          }
+        }
+      }
+
+      .response-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20%;
+        .rank-point{
+          width: 20px;
+        }
+      }
+    }
+
+    #card-content {
+      margin-top: 5vh;
+      height: 81.5vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      #unselect-content{
+        display: flex;
+        justify-content: center;
+        input{
+          display: none;
+        }
+        .button{
+          cursor: pointer;
+          border: 1px solid;
+          padding:.5rem;
+          border-radius:10px;
+          &:hover{
+            @include shadowCard($light);
+          }
+          &.active{
+            background: $unselect;
+          }
+        }
+      }
+
+      #bronze-to-platinum {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        //sublink bronze card
+        .bronze-card {
+          border-color: $bronze;
+          p {
+            color:$bronze;
+          }
+          &:hover{
+            @include shadowCard($bronze);
+          }
+          &.active{
+            background: rgba($bronze,25%);
+          }
+        }
+
+        //sublink silver card
+        .silver-card {
+          border-color: $silver;
+          p {
+            color:$silver;
+          }
+          &:hover{
+            @include shadowCard($silver);
+          }
+          &.active{
+            background: rgba($silver,25%);
+          }
+        }
+
+        //sublink gold card
+        .gold-card {
+          border-color: $gold;
+          p {
+            color:$gold;
+          }
+          &:hover{
+            @include shadowCard($gold);
+          }
+          &.active{
+            background: rgba($gold,25%);
+          }
+        }
+
+        //sublink platinum card
+        .platinum-card {
+          border-color: $platinum;
+          p {
+            color:$platinum;
+          }
+          &:hover{
+            @include shadowCard($platinum);
+          }
+          &.active{
+            background: rgba($platinum,25%);
+          }
+        }
+      }
+
+      #diamond-to-gm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        //sublink diamond card
+        .diamond-card {
+          border-color: $diamond;
+          p {
+            color: $diamond;
+          }
+          &:hover{
+            @include shadowCard($diamond);
+          }
+          &.active{
+            background: rgba($diamond,25%);
+          }
+        }
+
+        //sublink master card
+        .master-card {
+          border-color: $master;
+          p {
+            color: $master;
+          }
+          &:hover{
+            @include shadowCard($master);
+          }
+          &.active{
+            background: rgba($master,25%);
+          }
+        }
+
+        //sublink grand master card
+        .grand-master-card {
+          border-color: $grand-master;
+          p{
+            color: $grand-master;
+          }
+          &:hover{
+            @include shadowCard($grand-master);
+          }
+          &.active{
+            background: rgba($grand-master,25%);
+          }
+        }
+      }
+
+      .card-info {
+        .card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          border:3px solid;
+          border-radius:10px;
+          width:241px;
+          height:283px;
+          cursor: pointer;
+          img {
+            width: 50%;
+          }
+
+          p {
+            font-size:xxx-large;
+          }
+        }
+        input{
+          display: none;
+        }
+      }
+    }
+  }
+}
