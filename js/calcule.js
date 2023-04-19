@@ -5,9 +5,9 @@ function calcule(){
   let radioSelect = document.querySelector('input[type="radio"]:checked');
   let input_point = document.getElementById('gold-point');
 
-  let pt = 0;
-  let rank_point = 0;
-  let point = 0;
+  // let pt = 0;
+  let rank_point=0;
+  let point= 0;
 
   const golden_gun = 3000;
 
@@ -24,7 +24,9 @@ function calcule(){
 
   if(isNaN(value_point)) {
     point = 0;
-    input_point.value = '0';
+  }
+  if(!isNaN(value_point)){
+    point = value_point;
   }
 
   if(radioSelect.value == 'unselect'){
@@ -59,16 +61,34 @@ function calcule(){
     rank_point = grand_master_point;
   }
 
-  let win = 0;
-  while (pt <= golden_gun){
-    pt = point + rank_point + (win * win_point);
-    win++;
-  }
+  winView.innerHTML = '';
+
+  var first = document.createElement("span");
+  first.className = "first";
+  first.innerHTML = "•";
+
+  var second = document.createElement("span");
+  second.className = "second";
+  second.innerHTML = "•";
+
+  var third = document.createElement("span");
+  third.className = "third";
+  third.innerHTML = "•";
+
+  // Ajout des balises span à l'élément body
+  winView.appendChild(first);
+  winView.appendChild(second);
+  winView.appendChild(third);
+
+  let point_total = point + rank_point;
+  let restant = golden_gun - point_total;
+  let win = restant / 25;
+  let result = Math.ceil(win);
 
   winView.classList.add('active');
 
   setTimeout(()=>{
-    winView.innerHTML = win;
+    winView.innerHTML = result;
   },1500)
 }
 
