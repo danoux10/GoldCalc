@@ -7,8 +7,9 @@ var masterCard = document.getElementById('master-card');
 var grandMasterCard = document.getElementById('grand-master-card');
 var btnUnselect = document.getElementById('btn-unselect');
 
-
 var radio = document.getElementsByName('rank');
+
+btnUnselect.classList.add('active');
 
 radio.forEach(function(button){
   button.addEventListener("change",function(){
@@ -19,7 +20,6 @@ radio.forEach(function(button){
     }else{
       btnUnselect.classList.remove('active');
     }
-
 
     if(selectedValue === "bronze"){
       bronzeCard.classList.add("active");

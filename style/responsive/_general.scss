@@ -9,9 +9,14 @@ main {
   height: 99%;
   h1 {
     text-align: center;
+    span{
+      font-family: 'Tilt Prism';
+      animation: color 4s ease infinite;
+
+    }
   }
 
-  form {
+  #form {
     #input-and-response {
       display: flex;
       align-items: center;
@@ -52,8 +57,35 @@ main {
         align-items: center;
         justify-content: space-around;
         width: 20%;
+        #response-win{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          span{
+            margin: 0 .5rem;
+          }
+          &.active{
+            .first {
+              animation: wave 1s 0.1s ease-in-out infinite;
+            }
+
+            .second {
+              animation: wave 1s 0.2s ease-in-out infinite;
+            }
+
+            .third {
+              animation: wave 1s 0.3s ease-in-out infinite;
+            }
+          }
+        }
         .rank-point{
           width: 20px;
+          svg{
+            animation-name: rainbow;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+          }
         }
       }
     }

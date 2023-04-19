@@ -5,6 +5,9 @@
 	<title>Gold - Calc</title>
 	<link href="style/style.css" rel="stylesheet">
 	<link class="favicon" href="icon/rank-point.svg" rel="shortcut icon" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--link background-->
@@ -15,23 +18,29 @@
 </div>
 
 <main>
-	<h1>Bienvenue sur Gold Calc</h1>
-
-	<form action="controller/calcul.php" id="calc" method="post">
+	<h1>
+		Bienvenue sur
+		<span>Gold Calc</span>
+	</h1>
+	<section id="form">
 		<div id="input-and-response">
 			<span class="input-content">
 				<label for="gold-point">Nombre de point de Golden Gun :</label>
 				<input id="gold-point" name="gold-point" type="text">
-				<button type="submit">Calculer</button>
+				<button id="calcule" type="button">Calculer</button>
 			</span>
 
 			<span class="response-content">
 				<p>Nombre de Win à faire :</p>
-				<p id="response-win">• • •</p>
+				<p id="response-win">
+					<span class="first">•</span>
+					<span class="second">•</span>
+					<span class="third">•</span>
+				</p>
 				<span class="rank-point">
-					<svg version="1.1" fill="crimson" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 459 543" xml:space="preserve">
-						<path fill="" class="down" opacity="1.000000" stroke="none"
-						      d="M456.972412,328.208191
+					<svg fill="crimson" version="1.1" viewBox="0 0 459 543" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+					     y="0px">
+						<path class="down" d="M456.972412,328.208191
 					        C446.077667,338.543976 435.169098,348.865234 424.291534,359.219116
 					        C409.897552,372.920166 395.554077,386.674377 381.139374,400.353577
 					        C369.622711,411.282593 358.025574,422.126740 346.476105,433.021240
@@ -62,9 +71,9 @@
 					        C410.178741,227.624313 422.131348,217.054810 434.038025,206.433792
 					        C440.792755,200.408478 447.489502,194.318130 454.934326,188.224670
 					        C456.102325,189.778152 456.935638,191.363495 456.937836,192.949997
-					        C457.000580,238.035995 456.979706,283.122101 456.972412,328.208191 z"/>
-					  <path fill="" class="up" opacity="1.000000" stroke="none"
-					        d="
+					        C457.000580,238.035995 456.979706,283.122101 456.972412,328.208191 z" fill="" opacity="1.000000"
+						      stroke="none"/>
+					  <path class="up" d="
 					    M438.183105,169.326141
 					        C431.205414,175.326508 424.421143,181.013397 417.724945,186.802139
 					        C407.286407,195.826096 396.947906,204.966660 386.422333,213.887085
@@ -92,9 +101,9 @@
 					        C391.235504,130.936478 404.327148,140.929977 417.310822,151.061172
 					        C424.265472,156.487869 431.141876,162.015198 438.014557,167.545593
 					        C438.342072,167.809143 438.290833,168.543350 438.183105,169.326141
-					    z"/>
-					  <path fill="" class="middle" opacity="1.000000" stroke="none"
-					        d="
+					    z" fill="" opacity="1.000000"
+					        stroke="none"/>
+					  <path class="middle" d="
 					    M290.012085,270.007996
 					        C270.700348,286.544403 251.744797,303.032318 232.369751,319.885162
 					        C202.926453,294.482056 173.361649,268.974121 143.264786,243.007156
@@ -107,7 +116,8 @@
 					        C281.288940,211.099609 294.548737,221.708450 307.775299,232.358398
 					        C312.236969,235.950912 316.581818,239.688446 320.916504,243.306641
 					        C310.630341,252.281189 300.499298,261.120361 290.012085,270.007996
-					    z"/>
+					    z" fill="" opacity="1.000000"
+					        stroke="none"/>
 					</svg>
 				</span>
 			</span>
@@ -115,83 +125,83 @@
 
 		<div id="card-content">
 			<section id="unselect-content">
-				<label for="unselect-rank" class="button" id="btn-unselect">unselect rank</label>
-				<input type="radio" name="rank" id="unselect-rank" value="unselect">
+				<label class="button" for="unselect-rank" id="btn-unselect">unselect rank</label>
+				<input id="unselect-rank" name="rank" type="radio" value="unselect" checked>
 			</section>
 			<section id="bronze-to-platinum">
 				<!--link bronze card-->
 				<div class="card-info">
-					<label class="card bronze-card" id="bronze-card" for="bronze">
+					<label class="card bronze-card" for="bronze" id="bronze-card">
 						<img alt="bronze-icon" class="rank-icon" src="icon/bronze.png">
 						<p class="name-rank">Bronze</p>
 					</label>
-					<input id="bronze" name="rank" type="radio" value="bronze" >
+					<input id="bronze" name="rank" type="radio" value="bronze">
 				</div>
 
 				<!--link silver card-->
 				<div class="card-info">
-					<label class="card silver-card" id="silver-card" for="silver">
+					<label class="card silver-card" for="silver" id="silver-card">
 						<img alt="silver-icon" class="rank-icon" src="icon/silver.png">
 						<p class="name-rank">Silver</p>
 					</label>
-					<input id="silver" name="rank" type="radio" value="silver" >
+					<input id="silver" name="rank" type="radio" value="silver">
 				</div>
 
 				<!--link gold card-->
 				<div class="card-info">
-					<label class="card gold-card" id="gold-card" for="gold">
+					<label class="card gold-card" for="gold" id="gold-card">
 						<img alt="gold-icon" class="rank-icon" src="icon/gold.png">
 						<p class="name-rank">Gold</p>
 					</label>
-					<input id="gold" name="rank" type="radio" value="gold" >
+					<input id="gold" name="rank" type="radio" value="gold">
 				</div>
 
 				<!--link platinum card-->
 				<div class="card-info">
-					<label class="card platinum-card" id="platinum-card" for="platinum">
+					<label class="card platinum-card" for="platinum" id="platinum-card">
 						<img alt="platinum-icon" class="rank-icon" src="icon/plat.png">
 						<p class="name-rank">Platinum</p>
 					</label>
-					<input id="platinum" name="rank" type="radio" value="platinum" >
+					<input id="platinum" name="rank" type="radio" value="platinum">
 				</div>
 			</section>
 
 			<section id="diamond-to-gm">
 				<!--link diamond card-->
 				<div class="card-info">
-					<label class="card diamond-card" id="diamond-card" for="diamond">
+					<label class="card diamond-card" for="diamond" id="diamond-card">
 						<img alt="diamond-icon" class="rank-icon" src="icon/diam.png">
 						<p class="name-rank">Diamond</p>
 					</label>
-					<input id="diamond" name="rank" type="radio" value="diamond" >
+					<input id="diamond" name="rank" type="radio" value="diamond">
 				</div>
 
 				<!--link master card-->
 				<div class="card-info">
-					<label class="card master-card" id="master-card" for="master">
+					<label class="card master-card" for="master" id="master-card">
 						<img alt="master-icon" class="rank-icon" src="icon/master.png">
 						<p class="name-rank">Master</p>
 					</label>
-					<input id="master" name="rank" type="radio" value="master" >
+					<input id="master" name="rank" type="radio" value="master">
 				</div>
 
 				<!--link grand master card-->
 				<div class="card-info">
-					<label class="card grand-master-card" id="grand-master-card" for="grand-master">
+					<label class="card grand-master-card" for="grand-master" id="grand-master-card">
 						<img alt="grand-master-icon" class="rank-icon" src="icon/Gm.png">
 						<span class="name content">
 							<p class="name-rank">Grand</p>
 							<p class="name-rank">Master</p>
 						</span>
 					</label>
-					<input id="grand-master" name="rank" type="radio" value="grand-master" >
+					<input id="grand-master" name="rank" type="radio" value="grand-master">
 				</div>
 			</section>
 		</div>
-	</form>
+	</section>
 </main>
 
 <script src="js/active-card.js"></script>
-<script src="js/ajax.js"></script>
+<script src="js/calcule.js"></script>
 </body>
 </html>

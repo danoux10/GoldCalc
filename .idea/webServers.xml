@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="4d70bb9b-88ab-48a6-86a0-b8c89d8bc04d" name="pi" url="http://192.168.1.31">
+      <webServer id="4d70bb9b-88ab-48a6-86a0-b8c89d8bc04d" name="nas" url="http://192.168.1.31">
         <fileTransfer rootFolder="/web/overwatch/goldCalc" host="192.168.1.31" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
