@@ -57,7 +57,7 @@ function calcule(){
     rank_point = master_point;
   }
 
-  if(radioSelect.value == 'grand_master'){
+  if(radioSelect.value == 'grand-master'){
     rank_point = grand_master_point;
   }
 
