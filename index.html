@@ -5,9 +5,6 @@
 	<title>Gold - Calc</title>
 	<link href="style/style.css" rel="stylesheet">
 	<link class="favicon" href="icon/rank-point.svg" rel="shortcut icon" type="image/x-icon">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
 </head>
 <body>
 <!--link background-->
@@ -27,7 +24,7 @@
 			<span class="input-content">
 				<label for="gold-point">Nombre de points de Golden Gun :</label>
 				<input id="gold-point" name="gold-point" type="text">
-				<button id="calcule" type="button">Calculer</button>
+				<button onclick="calcule()" type="button">Calculer</button>
 			</span>
 
 			<span class="response-content">
@@ -130,13 +127,13 @@
 			</section>
 			<section id="bronze-to-platinum">
 				<!--link bronze card-->
-				<div class="card-info">
-					<label class="card bronze-card" for="bronze" id="bronze-card">
-						<img alt="bronze-icon" class="rank-icon" src="icon/bronze.png">
-						<p class="name-rank">Bronze</p>
-					</label>
-					<input id="bronze" name="rank" type="radio" value="bronze">
-				</div>
+					<div class="card-info">
+						<label class="card bronze-card" for="bronze" id="bronze-card">
+							<img alt="bronze-icon" class="rank-icon" src="icon/bronze.png">
+							<p class="name-rank">Bronze</p>
+						</label>
+						<input id="bronze" name="rank" type="radio" value="bronze">
+					</div>
 
 				<!--link silver card-->
 				<div class="card-info">

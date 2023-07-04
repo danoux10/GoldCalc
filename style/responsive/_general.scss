@@ -215,6 +215,7 @@ main {
         .grand-master-card {
           border-color: $grand-master;
           p{
+            text-align: center;
             color: $grand-master;
           }
           &:hover{
@@ -242,7 +243,8 @@ main {
           }
 
           p {
-            font-size:xxx-large;
+            font-family: "Bruno Ace SC";
+            font-size:xx-large;
           }
         }
         input{

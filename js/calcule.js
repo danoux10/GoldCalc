@@ -1,4 +1,3 @@
-const button = document.getElementById('calcule');
 const winView = document.getElementById('response-win');
 function calcule(){
   let value_point = parseInt(document.getElementById('gold-point').value);
@@ -91,5 +90,3 @@ function calcule(){
     winView.innerHTML = result;
   },1500)
 }
-
-button.addEventListener('click',calcule);
