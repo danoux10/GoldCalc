@@ -1,9 +1,9 @@
+var radioButtons = document.getElementsByName("rank");
 const buttons = document.querySelectorAll(".button");
 
 buttons[0].classList.add('active');
-function handleRankChange() {
-  var radioButtons = document.getElementsByName("rank");
 
+function handleRankChange(event) {
   for (var i = 0; i < radioButtons.length; i++) {
     var radioButton = radioButtons[i];
 
@@ -16,3 +16,7 @@ function handleRankChange() {
     }
   }
 }
+
+radioButtons.forEach(function (radioButton) {
+  radioButton.addEventListener("change", handleRankChange);
+});
