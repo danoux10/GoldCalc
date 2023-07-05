@@ -7,6 +7,50 @@
 	<link class="favicon" href="icon/rank-point.svg" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
+
+<div id="loader">
+	<div class="background-loader">
+		<svg version="1.1"
+		     id="overwatch-logo" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
+		     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1581.6 1581.7"
+		     style="enable-background:new 0 0 1581.6 1581.7;" xml:space="preserve">
+				<path fill="#FA9C1E" d="M1285.9,174.2l-149.4,173.3c-202.2-156.1-488.1-160.2-691.5,0L295.6,174.2C582.8-57.9,998.2-58.2,1285.9,174.2z"/>
+			<path fill="#4a4c4e" d="M244.7,218.8c3.2-2.9,6.1-6.2,9.6-8.9c49.7,57.7,99.4,115.3,149,173c-1.4,2.2-3.5,3.8-5.3,5.7
+				C264.4,520,204.3,705,237.6,891.5c11,61.2,31.9,120.7,62.9,174.6l308-298.3l152.8-328.9c2.3,166.3-0.4,332.9,0.1,499.3l-309.3,301.2
+				c190.8,148.5,491,153.6,679.2-1.5L823.9,938.2c-7-159.3,0.1-337.2,0.3-498.6l152.6,328.2l305.2,295.7c2.7-3.7,4.4-7.9,6.7-11.9
+				c15.1-28.8,27.7-58.9,37.6-89.8c63.4-199,11.2-419.5-137.2-567.7c-3.6-3.8-7.8-7.1-11-11.2c48.9-58.2,99.4-115.6,149.1-173.1
+				c33.1,30.3,63.4,63.8,90.7,99.4c187.4,244.1,215.9,574.6,74.7,846.6c-20.4,39.4-44.4,76.9-71.2,112.3
+				c-50.6,67.4-112.5,126.2-182,174c-291.3,200.5-685.5,185.1-957.5-45.7c-44.8-37.6-85.5-80.1-120.8-126.8
+				C-79.9,951.8-49.3,496.9,244.7,218.8L244.7,218.8z"/>
+			</svg>
+
+		<div class="inner-ring3">
+			<div class="inner-ring3-p1-c">
+				<div class="p1-an">
+					<div class="inner-ring3-p1-r"></div>
+				</div>
+			</div>
+			<div class="inner-ring3-p2-c">
+				<div class="p2-an">
+					<div class="inner-ring3-p2-r"></div>
+				</div>
+			</div>
+		</div>
+		<div class="inner-ring2">
+			<div class="inner-ring2-c">
+				<div class="inner-ring2-r"></div>
+			</div>
+		</div>
+		<div class="outer-ring"></div>
+		<div class="outer-ring2"></div>
+	</div>
+
+	<div class="front-loader">
+		<span class="circle"></span>
+		<P>Chargement</P>
+	</div>
+</div>
+
 <!--link background-->
 <div id="background-content">
 	<div id="stars"></div>
@@ -123,81 +167,82 @@
 		<div id="card-content">
 			<section id="unselect-content">
 				<label class="button" for="unselect-rank" id="btn-unselect">unselect rank</label>
-				<input id="unselect-rank" name="rank" type="radio" value="unselect" checked>
+				<input id="unselect-rank" name="rank" type="radio" value="unselect" checked onchange="handleRankChange()">
 			</section>
 			<section id="bronze-to-platinum">
 				<!--link bronze card-->
 					<div class="card-info">
-						<label class="card bronze-card" for="bronze" id="bronze-card">
+						<label class="button card bronze-card" for="bronze" id="bronze-card">
 							<img alt="bronze-icon" class="rank-icon" src="icon/bronze.png">
 							<p class="name-rank">Bronze</p>
 						</label>
-						<input id="bronze" name="rank" type="radio" value="bronze">
+						<input id="bronze" name="rank" type="radio" value="bronze" onchange="handleRankChange()">
 					</div>
 
 				<!--link silver card-->
 				<div class="card-info">
-					<label class="card silver-card" for="silver" id="silver-card">
+					<label class="button card silver-card" for="silver" id="silver-card">
 						<img alt="silver-icon" class="rank-icon" src="icon/silver.png">
 						<p class="name-rank">Silver</p>
 					</label>
-					<input id="silver" name="rank" type="radio" value="silver">
+					<input id="silver" name="rank" type="radio" value="silver" onchange="handleRankChange()">
 				</div>
 
 				<!--link gold card-->
 				<div class="card-info">
-					<label class="card gold-card" for="gold" id="gold-card">
+					<label class="button card gold-card" for="gold" id="gold-card">
 						<img alt="gold-icon" class="rank-icon" src="icon/gold.png">
 						<p class="name-rank">Gold</p>
 					</label>
-					<input id="gold" name="rank" type="radio" value="gold">
+					<input id="gold" name="rank" type="radio" value="gold" onchange="handleRankChange()">
 				</div>
 
 				<!--link platinum card-->
 				<div class="card-info">
-					<label class="card platinum-card" for="platinum" id="platinum-card">
+					<label class="button card platinum-card" for="platinum" id="platinum-card">
 						<img alt="platinum-icon" class="rank-icon" src="icon/plat.png">
 						<p class="name-rank">Platinum</p>
 					</label>
-					<input id="platinum" name="rank" type="radio" value="platinum">
+					<input id="platinum" name="rank" type="radio" value="platinum" onchange="handleRankChange()">
 				</div>
 			</section>
 
 			<section id="diamond-to-gm">
 				<!--link diamond card-->
 				<div class="card-info">
-					<label class="card diamond-card" for="diamond" id="diamond-card">
+					<label class="button card diamond-card" for="diamond" id="diamond-card">
 						<img alt="diamond-icon" class="rank-icon" src="icon/diam.png">
 						<p class="name-rank">Diamond</p>
 					</label>
-					<input id="diamond" name="rank" type="radio" value="diamond">
+					<input id="diamond" name="rank" type="radio" value="diamond" onchange="handleRankChange()">
 				</div>
 
 				<!--link master card-->
 				<div class="card-info">
-					<label class="card master-card" for="master" id="master-card">
+					<label class="button card master-card" for="master" id="master-card">
 						<img alt="master-icon" class="rank-icon" src="icon/master.png">
 						<p class="name-rank">Master</p>
 					</label>
-					<input id="master" name="rank" type="radio" value="master">
+					<input id="master" name="rank" type="radio" value="master" onchange="handleRankChange()">
 				</div>
 
 				<!--link grand master card-->
 				<div class="card-info">
-					<label class="card grand-master-card" for="grand-master" id="grand-master-card">
+					<label class="button card grand-master-card" for="grand-master" id="grand-master-card">
 						<img alt="grand-master-icon" class="rank-icon" src="icon/Gm.png">
 						<span class="name content">
 							<p class="name-rank">Grand</p>
 							<p class="name-rank">Master</p>
 						</span>
 					</label>
-					<input id="grand-master" name="rank" type="radio" value="grand-master">
+					<input id="grand-master" name="rank" type="radio" value="grand-master" onchange="handleRankChange()">
 				</div>
 			</section>
 		</div>
 	</section>
 </main>
 
+<script src="js/loader.js"></script>
 <script src="js/active-card.js"></script>
 <script src="js/calcule.js"></script>
 </body>

@@ -1,0 +1,281 @@
+$text-border : red;
+#loader{
+  &.hidden{
+    display: none;
+  }
+  z-index:1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .background-loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+    #overwatch-logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 10rem;
+    }
+
+    .inner-ring1{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0px 0px -100px;
+      background-color: transparent;
+      border-radius: 50%;
+      background-color: transparent;
+      border-radius: 50%;
+      animation: rotate21 2s linear infinite;
+      .inner-ring1-c{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .inner-ring1-r{
+        width: 180px;
+        height: 180px;
+        border:10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left: 0;
+        border-top:10px solid #F9D64A;
+        border-left:10px solid #F9D64A;
+        transform : rotate(-0deg);
+        animation: ring11 2s linear infinite;
+      }
+    }
+
+    .inner-ring2{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0px 0px -100px;
+      background-color: transparent;
+      border-radius: 50%;
+      background-color: transparent;
+      border-radius: 50%;
+      animation: rotate22 2s linear infinite;
+      .inner-ring2-c{
+        position: relative;
+        width: 100px;
+        height: 200px;
+        overflow: hidden;
+
+      }
+      .inner-ring2-r{
+        width: 180px;
+        height: 180px;
+        border:10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left: 0;
+        border-top:10px solid #F9D64A;
+        border-left:10px solid #F9D64A;
+        transform : rotate(-0deg);
+        animation: ring12 2s linear infinite;
+      }
+    }
+
+    .inner-ring3{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      margin: -100px 0px 0px -100px;
+      background-color: transparent;
+      border-radius: 50%;
+      background-color: transparent;
+      border-radius: 50%;
+      animation: ring6 2s infinite linear;
+      .inner-ring3-p1-c{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .inner-ring3-p1-r{
+        width: 180px;
+        height: 180px;
+        border:10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left: 0;
+        border-top:10px solid rgba(189, 186, 62, 0.25);
+        border-left:10px solid rgba(189, 186, 62, 0.25);
+        transform: rotate(-45deg);
+        animation: ring4 2s linear infinite;
+      }
+      .p1-an{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: ring5 2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+      }
+      .inner-ring3-p2-c{
+        position: relative;
+        float: right;
+        width: 100px;
+        height: 200px;
+        transform : rotate(180deg);
+        overflow: hidden;
+      }
+      .inner-ring3-p2-r{
+        width: 180px;
+        height: 180px;
+        border:10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left: 0;
+        border-top:10px solid rgba(189, 186, 62, 0.25);
+        border-left:10px solid rgba(189, 186, 62, 0.25);
+        transform: rotate(-45deg);
+        animation: ring2 2s cubic-bezier(0.5, 0, 1, 0.5) infinite;
+      }
+      .p2-an{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: ring3 2s linear infinite;
+      }
+    }
+
+    .outer-ring{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 220px;
+      height: 220px;
+      margin: -116px 0px 0px -116px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(161,164,176,.5);
+        border-radius: 50%;
+        clip: rect(112px, 232px, 120px, 100px);
+        animation: rotate3602 3s linear infinite reverse;
+      }
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(161,164,176,.5);
+        border-radius: 50%;
+        clip: rect(105px, 232px, 127px, 100px);
+        animation: rotate3603 3s cubic-bezier(0.34, 0.07, 0.68, 0.93) infinite;
+      }
+    }
+
+    .outer-ring2{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 220px;
+      height: 220px;
+      margin: -116px 0px 0px -116px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(161,164,176,.5);
+        border-radius: 50%;
+        transform: rotate(120deg);
+        clip: rect(80px, 232px, 152px, 100px);
+        animation: rotate3602 3s linear infinite;
+      }
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        width: 220px;
+        height: 220px;
+        border: 6px solid rgba(161,164,176,.5);
+        border-radius: 50%;
+        transform: rotate(230deg);
+        clip: rect(60px, 232px, 172px, 100px);
+        animation: rotate360 3s cubic-bezier(0.34, 0.07, 0.68, 0.93) infinite;
+      }
+    }
+  }
+
+  .front-loader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .circle{
+      --circle-size : 2rem;
+      width: var(--circle-size);
+      height: var(--circle-size);
+      border-radius:50px;
+      background: #f1f3f8;
+      position: relative;
+      animation: size 3s linear infinite;
+      &:before{
+        content: "";
+        height: calc(1.5 * var(--circle-size));
+        width: calc(1.5 * var(--circle-size));
+        border-left: 2px solid #f1f3f8;
+        border-right: 2px solid #f1f3f8;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50px;
+        animation: rotate-litle 3s linear infinite;
+      }
+    }
+    p{
+      margin-left: 1rem;
+      font-size: xxx-large;
+      font-family: "Bruno Ace SC";
+      -webkit-text-stroke: 2px $text-border;
+      text-stroke: 2px $text-border;
+    }
+  }
+}
