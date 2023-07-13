@@ -6,3 +6,48 @@
     transform: translateY(-2000px);
   }
 }
+
+@keyframes wave {
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    transform: scale(1);
+    fill: crimson;
+  }
+  50% {
+    transform: scale(1.5);
+    fill: #DD2CFF;
+  }
+  100% {
+    transform: scale(1);
+    fill: crimson;
+  }
+}
+
+@keyframes color {
+  0%{
+    color:darkgoldenrod;
+  }
+  25%{
+    color: goldenrod;
+  }
+  50%{
+    color: gold;
+  }
+  75%{
+    color:goldenrod;
+  }
+  100%{
+    color: darkgoldenrod;
+  }
+}

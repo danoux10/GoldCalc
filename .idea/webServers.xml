@@ -16,6 +16,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="1ab14ccf-f327-458a-ab17-eb4bf5ca46d5" name="192.168.1.39" url="http://192.168.1.39">
+        <fileTransfer rootFolder="/GoldCalc" host="192.168.1.39" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

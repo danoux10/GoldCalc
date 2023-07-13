@@ -3,6 +3,13 @@
   <component name="PublishConfigData" serverName="nas" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
+      <paths name="192.168.1.39">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/GoldCalc" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="nas">
         <serverdata>
           <mappings>
@@ -13,7 +20,7 @@
       <paths name="nas Distant">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="" />
           </mappings>
         </serverdata>
       </paths>
