@@ -2,7 +2,6 @@ const winView = document.getElementById('response-win');
 function calcule(){
   let value_point = parseInt(document.getElementById('gold-point').value);
   let radioSelect = document.querySelector('input[type="radio"]:checked');
-  let input_point = document.getElementById('gold-point');
 
   // let pt = 0;
   const golden_gun = 3000;
@@ -19,7 +18,7 @@ function calcule(){
     'grand-master' : 1500,
   }
 
-  let point = isNan(value_point) ? 0 : value_point;
+  let point = isNaN(value_point) ? 0 : value_point;
   let rank_point = rank_points[radioSelect.value] || 0 ;
 
   winView.innerHTML = '';
@@ -33,7 +32,7 @@ function calcule(){
 
   let point_total = point + rank_point;
   let restant = golden_gun - point_total;
-  let win = restant / 25;
+  let win = restant / win_point;
   let result = Math.ceil(win);
 
   winView.classList.add('active');
