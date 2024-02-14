@@ -5,7 +5,7 @@ function calcule(){
 
   // let pt = 0;
   const golden_gun = 3000;
-  const win_point = 25;
+  const win_point = 10;
 
   const rank_points ={
     'unselect' : 0,
